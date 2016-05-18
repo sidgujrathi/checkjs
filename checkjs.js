@@ -72,6 +72,7 @@
 			
 	}
 
+	/*Check if Checkjs is initiated in DOM or not*/
 	if(typeof(Checkjs) === 'undefined') {
    	    window.Checkjs = define_Checkjs();
 
