@@ -17,12 +17,13 @@
  		/*Validation error messeges*/
  		var messeges = {
 
- 						invalidUrl:"Url you have entered is in wrong formate",
- 						invalidNumber:"",
- 						invalidEmail:"",
- 						invalidPhone:"",
- 						invalidZipCode:"",
- 						invalidCreditCard:""
+ 							invalidUrl:"Url you have entered is in wrong format",
+ 						invalidNumber:"Number you have entered is in wrong format",
+ 						invalidEmail:"Email is not valid",
+ 						invalidPhone:"Phone number is in not valid format",
+ 						invalidZipCode:"Zip code is invalid",
+ 						invalidCreditCard:"Credit card number is invalid"
+
  		};
 
  		/*Main function of lib to validate data*/
