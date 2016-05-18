@@ -24,6 +24,49 @@
  						invalidZipCode:"",
  						invalidCreditCard:""
  		};
+
+ 		/*Main function of lib to validate data*/
+ 		Checkjs.validate = function(data_obj, result)
+ 		{
+ 			switch(data_obj.rule)
+ 			{
+ 				case "Url": if(new RegExp(urlRegex).test(data_obj.data))
+ 								result(true, "");
+ 							else
+ 								result(false, messeges.invalidUrl);
+ 							break;
+ 				case "Email": if(new RegExp(emailRegex).test(data_obj.data))
+ 								result(true, "");
+ 							  else
+ 								result(false, messeges.invalidEmail);
+ 							  break;
+ 				case "Number": if(new RegExp(numericRegex).test(data_obj.data))
+ 								result(true, "");
+ 							   else
+ 								result(false, messeges.invalidNumber);
+ 							   break;
+ 				case "Phone": if(new RegExp(usPhoneRegex).test(data_obj.data))
+ 								result(true, "");
+ 							  else
+ 								result(false, messeges.invalidPhone);
+ 							  break;
+ 				case "ZipCode": if(new RegExp(usZipcodeRegex).test(data_obj.data))
+ 								 result(true, "");
+ 							    else
+ 								 result(false, messeges.invalidZipCode);
+ 							    break;
+ 				case "CreditCard": if(new RegExp(creditCardRegex).test(data_obj.data))
+ 									result(true, "");
+ 								   else
+ 									result(false, messeges.invalidCreditCard);
+ 								   break;
+ 				default : result(false,"invalid rule");
+ 						  break;				   															
+
+ 			}
+ 		}
+ 		
+ 		return Checkjs;	
  			
 			
 	}
